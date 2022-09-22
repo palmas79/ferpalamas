@@ -16,8 +16,13 @@ body{
 }
 
 header{
-    display: grid;
+    background-image: url(../img/DEVILLE_2746.jpg);
+    background-size: cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 1.5em;
     justify-content: center;
+        
 }
 
 nav ul li{
@@ -58,47 +63,6 @@ footer{
 }
 
 
-header{
-    grid-area: header;
-    }
-
-.navbar{
-    grid-area: navbar;
-}
-
-.marca{
-    grid-area: marca;
-}
-li{
-    grid-area: nav;
-}
-
-.cuerpo{
-    grid-area: cuerpo;
-}
-.picture{
-    grid-area: picture;
-}
-
-footer{
-    grid-area: footer;
-}
-
-.container{
-    background-image: url(../img/DEVILLE_2746.jpg);
-    background-size: cover ;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 1.5em;
-    display: grid;
-    gap: 20px;
-    grid-template-areas: 
-    "navbar"
-    "marca"
-    "li"
-    "cuerpo"
-    "footer";
-}
 
 .padre{
     background-color: beige;
@@ -117,51 +81,3 @@ img{
     margin-top: 15px;
 }
 
-@media(min-width: 768px;){
-    .container{
-        margin bottom: 1.5em;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        "navbar navbar"
-        "marca li"
-        "cuerpo cuerpo"
-        "footer footer";
-    }
-
-    nav ul{
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    footer{
-        margin-top: 0%;
-    }
-}
-
-
-@media(min-width: 1024px;){
-    .container{
-        margin-bottom: 1.5rem;
-        grid-template-columns: (4, 1fr);
-        grid-template-areas: 
-        "header header header header"
-        "marca 0 li li"
-        "cuerpo cuerpo cuerpo cuerpo"
-        "picture picture picture picture"
-        "footer footer footer footer";
-}
-nav ul{
-    flex-direction: column;
-
-}
-
-.padre{
-    display: grid;
-    grid-template-columns: (4, 1fr);
-}
-.picture{
-    width: 200px;
-    height: 200px;
-}
-
-}
