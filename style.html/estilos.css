@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu&family=Noto+Sans:wght@100&family=Raleway:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    text-align: center;
+    font-family: 'Anek Telugu', sans-serif;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header{
+    display: grid;
+    justify-content: center;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    gap: 10px;
+    
+    }
+
+    .marca{
+        width: 200px;
+        height: 150px;
+    }
+
+h3{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: larger;
+    color: rgb(241, 43, 69);
+}
+
+a{
+    text-decoration: none;
+    color: rgb(238, 236, 234);
+    
+}
+
+.redes{
+width: 80px;
+height: 80px;
+}
+
+
+footer{
+    padding: 3em;
+    background-color: rgb(61, 52, 40);
+    margin-bottom: 0;
+    margin-top: 1.5em;
+}
+
+
+header{
+    grid-area: header;
+    }
+
+.navbar{
+    grid-area: navbar;
+}
+
+.marca{
+    grid-area: marca;
+}
+li{
+    grid-area: nav;
+}
+
+.cuerpo{
+    grid-area: cuerpo;
+}
+.picture{
+    grid-area: picture;
+}
+
+footer{
+    grid-area: footer;
+}
+
+.container{
+    background-image: url(../img/DEVILLE_2746.jpg);
+    background-size: cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 1.5em;
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "navbar"
+    "marca"
+    "li"
+    "cuerpo"
+    "footer";
+}
+
+.padre{
+    background-color: beige;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    gap: 15px;
+}
+
+img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border: 1px solid rgb(65, 18, 18);
+    margin-top: 15px;
+}
+
+@media(min-width: 768px;){
+    .container{
+        margin bottom: 1.5em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "navbar navbar"
+        "marca li"
+        "cuerpo cuerpo"
+        "footer footer";
+    }
+
+    nav ul{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    footer{
+        margin-top: 0%;
+    }
+}
+
+
+@media(min-width: 1024px;){
+    .container{
+        margin-bottom: 1.5rem;
+        grid-template-columns: (4, 1fr);
+        grid-template-areas: 
+        "header header header header"
+        "marca 0 li li"
+        "cuerpo cuerpo cuerpo cuerpo"
+        "picture picture picture picture"
+        "footer footer footer footer";
+}
+nav ul{
+    flex-direction: column;
+
+}
+
+.padre{
+    display: grid;
+    grid-template-columns: (4, 1fr);
+}
+.picture{
+    width: 200px;
+    height: 200px;
+}
+
+}
