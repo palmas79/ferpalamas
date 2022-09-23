@@ -63,14 +63,9 @@ footer{
 }
 
 
-
 .padre{
     background-color: beige;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    justify-items: center;
-    gap: 15px;
+    
 }
 
 img{
